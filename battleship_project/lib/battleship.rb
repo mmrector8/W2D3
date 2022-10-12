@@ -5,9 +5,9 @@ class Battleship
 
     attr_reader :board, :player
     def initialize(n)
-        @player = Player.new()
+        @player = Player.new
         @board = Board.new(n)
-        @remaining_misses = (n*n)/2
+        @remaining_misses = @board.size/2
     end 
 
     def start_game

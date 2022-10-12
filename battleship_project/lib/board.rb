@@ -1,5 +1,13 @@
 class Board
     attr_reader :size
+
+   def self.print_grid(grid)
+    #loop through grid array
+    grid.each do |subarr|
+        puts subarr.join(" ") 
+    end 
+  end 
+
   def initialize(n)
     @grid = Array.new(n){Array.new(n){|ele| ele = :N}} 
     @size = n * n
@@ -62,13 +70,6 @@ class Board
         end 
     end 
     hidden
-  end 
-
-  def self.print_grid(grid)
-    #loop through grid array
-    grid.each do |subarr|
-        puts subarr.join(" ") 
-    end 
   end 
 
     def cheat
